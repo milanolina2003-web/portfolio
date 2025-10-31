@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À propos | BOUABDALLAH Lina</title>
+
+    <style>
+      /* 🌄 Fond de page complet */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Courier New", monospace;
+        color: #fff;
+        background-image: url("assets/images/m2.jpg"); /* 🔁 Remplace par ton image */
+        background-size: cover; /* L’image remplit tout l’écran */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* L’image reste fixe quand on défile */
+      }
+
+      header {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 30px;
+        color: #fff;
+        position: relative;
+      }
+
+      .home-btn {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        background: rgba(44, 44, 44, 0.9);
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .home-btn:hover {
+        transform: translateY(-2px);
+        background: rgba(31, 31, 31, 0.95);
+      }
+
+      .cursor {
+        color: #060402;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%, 50%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      #bar {
+        display: flex;
+        gap: 8px;
+        padding: 10px;
+        background: rgba(2, 1, 0, 0.9);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .icon {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+      }
+
+      .icon-red { background-color: #ff5f56; }
+      .icon-yellow { background-color: #ffbd2e; }
+      .icon-green { background-color: #27c93f; }
+
+      #screen {
+        background-color: rgba(81, 80, 79, 0.8); /* transparence pour voir l’image */
+        padding: 20px 30px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      }
+
+      #contentheader {
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 5px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        color: #ffffff;
+        margin-top: 20px;
+      }
+
+      h3 {
+        color: #ffe9d2;
+        margin-bottom: 5px;
+      }
+
+      ul {
+        margin-top: 5px;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+
+      .info-list div {
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      #innerfooter {
+        margin-top: 20px;
+        text-align: right;
+        font-size: 0.9rem;
+        color: #ffe7c2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Titre -->
+    <header id="header">
+      <div id="head">BOUABDALLAH Lina<span class="cursor">_</span></div>
+      <a href="index.html" class="home-btn">🏠 Accueil</a>
+    </header>
+
+    <!-- Faux terminal -->
+    <main id="content">
+      <div class="container">
+        <div id="bar">
+          <div class="icon icon-red"></div>
+          <div class="icon icon-yellow"></div>
+          <div class="icon icon-green"></div>
+        </div>
+
+        <div id="screen">
+          <div id="innercontent">
+            <div id="contentheader">À PROPOS</div>
+
+            <section>
+              <h3>👩‍🎓 Formation</h3>
+              <div class="info-list" aria-label="Informations de formation">
+                <div><strong>Nom et prénom :</strong> BOUABDALLAH Lina</div>
+                <div><strong>Spécialité :</strong> IDTW (Ingénierie des Données et Technologies du Web)</div>
+                <div><strong>Groupe :</strong> 03</div>
+              </div>
+
+              <h3>✨ Compétences</h3>
+              <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Python, Java</li>
+                <li>Conception de bases de données (SQL)</li>
+                <li>Utilisation de Git et GitHub</li>
+              </ul>
+
+              <h3>🎯 Objectif</h3>
+              <p>Développer mes compétences en développement web.</p>
+
+              <h3>🌿 Centres d’intérêt</h3>
+              <ul>
+                <li>Musique et voyages</li>
+                <li>Programmation et innovation</li>
+                <li>Design web et UX/UI</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>📂 Mes projets</h2>
+              <ul>
+                <li>Projet 1 : Site e-commerce HTML/CSS (2e année)</li>
+                <li>Projet 2 : Mini application agenda médical en Flutter (3e année)</li>
+                <li>Projet 3 : Site web sur les langages de programmation pour débutants (Master 1)</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>📧 Contact</h2>
+              <p>Email : <a href="mailto:informatique2023aaa@gmail.com">informatique2023aaa@gmail.com</a></p>
+            </section>
+
+            <div id="innerfooter">Dernière mise à jour - 29/10/2025</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil | BOUABDALLAH Lina</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- 🎵 Bouton Musique -->
+    <button id="music-btn" class="music-btn">🎶 Besoin d’un peu de rythme ?</button>
+
+    <!-- 🖼️ Section principale -->
+    <header class="hero">
+      <div class="overlay"></div>
+      <h1 class="title">Bienvenue dans mon univers créatif</h1>
+      <p class="subtitle">où le design rime avec confort</p>
+      <div class="buttons">
+        <a href="w3d.html" class="btn" id="explore">web3D</a>
+      </div>
+    </header>
+
+    <!-- 🍔 Menu Burger -->
+    <nav class="menu">
+      <div class="burger" id="burger">&#9776;</div>
+      <ul id="menu-list">
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="#portfolio">Projets</a></li>
+      </ul>
+    </nav>
+
+    <!-- ✨ Texte d’intro -->
+    <section class="intro-text">
+      <p>
+        Si vous souhaitez en savoir plus sur mes projets précédents,
+        n’hésitez pas à faire défiler la page — vous les découvrirez plus bas.
+      </p>
+    </section>
+
+    <!-- 💼 Section Projets -->
+    <section class="portfolio" id="portfolio">
+      <h2>Mes Projets</h2>
+      <div class="cards">
+        <div class="card">Projet 1 : Site e-commerce HTML/CSS (2e année)</div>
+        <div class="card">Projet 2 : Mini application agenda médical en Flutter (3e année)</div>
+        <div class="card">Projet 3 : Site web sur les langages de programmation (1ʳᵉ année master)</div>
+      </div>
+    </section>
+
+    <!-- 🔊 Musique de fond -->
+    <audio id="background-audio" loop>
+      <source src="assets/audio/doux.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

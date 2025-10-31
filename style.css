@@ -1,0 +1,245 @@
+:root {
+  --bg: #FFF0DC;
+  --accent: #d6955b;
+  --text: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* === Bouton Musique === */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.music-btn:hover {
+  animation: pulse 0.4s ease-in-out;
+  background: #c57b44;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* === Section Hero === */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: url("assets/images/m4.jpg") no-repeat center center/cover;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15); /* voile blanc transparent */
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  animation: fadeIn 2s ease forwards;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 600;
+  text-transform: uppercase;
+  animation: text3D 4s ease-in-out infinite alternate;
+  color: #050404e4;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.subtitle {
+  margin-top: 15px;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #050404;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  z-index: 2;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #c57b44;
+  transform: translateY(-2px);
+}
+
+/* === Menu Burger === */
+.menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 900;
+}
+
+.burger {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+#menu-list {
+  list-style: none;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#menu-list li {
+  margin: 10px 0;
+}
+
+#menu-list a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#menu-list a:hover {
+  color: #c57b44;
+}
+
+/* === Intro === */
+.intro-text {
+  text-align: center;
+  padding: 60px 20px 20px 20px;
+  font-size: 1.2em;
+  color: #030202;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1.5s ease;
+
+}
+
+/* === Portfolio === */
+.portfolio {
+  padding: 80px 20px;
+  text-align: center;
+  background: #F0BB78;
+}
+
+.portfolio h2 {
+  font-size: 2.5em;
+  color: var(--accent);
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #FFF0DC;
+  border: 2px solid var(--accent);
+  border-radius: 15px;
+  padding: 40px;
+  width: 220px;
+  font-weight: bold;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.1);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes text3D {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(20deg); }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2em;
+  }
+
+  .btn, .music-btn {
+    font-size: 0.85em;
+    padding: 8px 18px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
