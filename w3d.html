@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -11,14 +11,14 @@
       body {
         background-image: url("assets/images/m2.jpg"); /* 🔁 Remplace par ton image */
         background-size: cover; /* 🔥 couvre tout l’écran */
-        background-position: center; /* 👈 centre bien l’image */
-        background-repeat: no-repeat; /* 🚫 pas de répétition */
-        background-attachment: fixed; /* 📌 effet de parallaxe fixe */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         font-family: "Courier New", monospace;
         margin: 0;
         padding: 0;
         color: #fff;
-        min-height: 100vh; /* garantit que le fond couvre toute la page */
+        min-height: 100vh;
       }
 
       /* === En-tête === */
@@ -141,6 +141,61 @@
         font-size: 0.9rem;
         color: #ffe7c2;
       }
+
+      /* === 🎨 Style du projet Blender === */
+      .project-preview {
+        position: relative;
+        display: inline-block;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .project-preview:hover {
+        transform: scale(1.03);
+      }
+
+      .preview-img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .download-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease;
+      }
+
+      .project-preview:hover .download-overlay {
+        opacity: 1;
+      }
+
+      .download-btn {
+        background: #d6955b;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      .download-btn:hover {
+        background: #c17f46;
+      }
     </style>
   </head>
 
@@ -150,5 +205,35 @@
       <div id="head">BOUABDALLAH Lina<span class="cursor">_</span></div>
       <a href="index.html" class="home-btn">🏠 Accueil</a>
     </header>
+
+    <!-- === Section Projet Blender === -->
+    <div class="container">
+      <div id="bar">
+        <div class="icon icon-red"></div>
+        <div class="icon icon-yellow"></div>
+        <div class="icon icon-green"></div>
+      </div>
+
+      <div id="screen">
+        <div id="contentheader">Projet Blender : Scène 3D</div>
+
+        <!-- 🪞 Fenêtre d’aperçu -->
+        <div class="project-preview">
+          <img src="assets/images/scene.png" alt="Aperçu du projet Blender" class="preview-img">
+          <div class="download-overlay">
+            <a href="assets/projects/scene.blend" download class="download-btn">⬇️ Télécharger la scène</a>
+          </div>
+          <div class="project-preview">
+            <img src="assets/images/scene2.png" alt="Aperçu du projet Blender" class="preview-img">
+            <div class="download-overlay">
+              <a href="assets/projects/tp2.blend" download class="download-btn">⬇️ Télécharger la scène</a>
+            </div>  
+        </div>
+
+        <p>Cette scène a été créée sous <strong>Blender</strong> et montre un environnement 3D conçu par moi. Cliquez sur l’image pour télécharger le fichier.</p>
+
+        <div id="innerfooter">#3D #Blender #Portfolio</div>
+      </div>
+    </div>
   </body>
 </html>
